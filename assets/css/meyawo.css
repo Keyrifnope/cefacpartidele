@@ -12,7 +12,7 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-@import url("https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,300i,400,400i,600,600i,700,700i");
+@import url("https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --blue: #1e549f;
   --indigo: #d19b2f;
@@ -11083,12 +11083,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  font-family: 'Baloo Paaji', cursive;
+  font-family: 'Noticia Text', serif;
   color: #d19b2f;
 }
 
 .my-font {
-  font-family: 'Baloo Paaji', cursive;
+  font-family: 'Noticia Text', serif;
 }
 
 p {
@@ -11643,7 +11643,7 @@ pre .code {
           align-items: center;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
-  font-family: 'Baloo Paaji', cursive;
+  font-family: 'Noticia Text', serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
