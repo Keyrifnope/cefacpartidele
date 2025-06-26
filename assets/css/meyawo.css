@@ -11195,13 +11195,21 @@ p {
   visibility: visible;
 }
 
-/*/ portfolio wrapper */
 .portfolio-card {
   display: block;
   position: relative;
   overflow: hidden;
 }
-
+.portfolio-card:hover {
+box-shadow: 0 0 30px 15px rgba(255, 165, 0, 0.6);
+transition: transform 0.4s ease;
+  transform: scale(1.1);
+}
+.portfolio-card:active {
+box-shadow: 0 0 50px 30px rgba(255, 165, 0, 0.6);
+transition: transform 0.4s ease;
+  transform: scale(0.8);
+}
 .portfolio-card .portfolio-card-img {
   width: 100%;
 }

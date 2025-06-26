@@ -110,22 +110,22 @@ blockquote {
     text-decoration: none; /* Elimină sublinierea de la link */
     text-transform: uppercase; /* Litere mari */
     letter-spacing: 1px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease; /* Animație lină pentru toate proprietățile */
 }
 
 /* Animație la hover (când mouse-ul este deasupra) */
 .home-button:hover {
-    background-color: #e74c3c; /* Roșu mai deschis */
-    transform: translateY(-3px); /* Se ridică puțin */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Umbră mai pronunțată */
+    transform: scale(1.1);
+    background-color: #ff523e; /* Roșu mai deschis */
+  box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.5);
 }
-
-/* Animație la click (când butonul este apăsat) */
 .home-button:active {
-    transform: translateY(1px); /* Se apasă în jos */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Umbra se micșorează */
+    transform: scale(0.8);
+    background-color: #ff523e; /* Roșu mai deschis */
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
 }
+/* Animație la click (când butonul este apăsat) */
 blockquote cite {
     display: block;
     margin-top: 0.5em;
