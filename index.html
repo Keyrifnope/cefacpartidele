@@ -233,6 +233,24 @@
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
     <script src="assets/js/meyawo.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.portfolio-card').on('click', function(e) {
+                e.preventDefault(); // Oprește comportamentul implicit al link-ului
 
+                var $card = $(this);
+                var targetUrl = $card.attr('href');
+
+                // Adaugă clasa pentru efectul vizual la click
+                // Această clasă activează transformările și umbra din CSS
+                $card.addClass('clicked-effect');
+
+                // Setăm un timer pentru a naviga după delay-ul de 0.5 secunde
+                setTimeout(function() {
+                    window.location.href = targetUrl;
+                }, 500); // 500 milisecunde = 0.5 secunde
+            });
+        });
+    </script>
 </body>
 </html>
