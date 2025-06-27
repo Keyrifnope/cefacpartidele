@@ -131,18 +131,40 @@ Controale reale și responsabilitate. Legea nu e opțională. Nici sănătatea o
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
             const scrollTopBtn = document.getElementById('scrollTopBtn');
             if (scrollTopBtn) {
                 scrollTopBtn.addEventListener('click', (event) => {
                     event.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
+
+
+            const navButtons = document.querySelectorAll('.bottom-nav-buttons .nav-button');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+
+                    event.preventDefault();
+
+                    const destination = this.href;
+                    const isTargetBlank = this.target === '_blank';
+
+
+                    setTimeout(() => {
+
+                        if (isTargetBlank) {
+
+                            window.open(destination, '_blank');
+                        } else {
+
+                            window.location.href = destination;
+                        }
+                    }, 500); 
+                });
+            });
         });
     </script>
-
 </body>
 </html>
