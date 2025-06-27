@@ -111,6 +111,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Funcționalitatea pentru butonul de scroll sus
             const scrollTopBtn = document.getElementById('scrollTopBtn');
             if (scrollTopBtn) {
                 scrollTopBtn.addEventListener('click', (event) => {
@@ -118,6 +119,31 @@
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
+
+            // --- COD ACTUALIZAT PENTRU TOATE BUTOANELE ---
+            const navButtons = document.querySelectorAll('.bottom-nav-buttons .nav-button');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    // Oprim navigarea instantă pentru TOATE butoanele
+                    event.preventDefault();
+
+                    const destination = this.href;
+                    const isTargetBlank = this.target === '_blank';
+
+                    // Setăm delay-ul
+                    setTimeout(() => {
+                        // Verificăm CUM deschidem link-ul după delay
+                        if (isTargetBlank) {
+                            // Deschidem într-un tab nou
+                            window.open(destination, '_blank');
+                        } else {
+                            // Navigăm în același tab
+                            window.location.href = destination;
+                        }
+                    }, 500); // 500 milisecunde = 0.5 secunde
+                });
+            });
         });
     </script>
 </body>
