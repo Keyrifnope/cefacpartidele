@@ -1,5 +1,4 @@
-/* Basic Reset and Body Styles */
-/* Basic Reset and Body Styles */
+
 body {
     
     font-family: 'Noticia Text', serif;
@@ -24,7 +23,7 @@ body {
 .pg-aur { 
     background: linear-gradient(to bottom, #fae100, #835700); 
 }
-/* Header Styles */
+
 .article-header {
     padding: 40px 0;
     text-align: center;
@@ -51,7 +50,6 @@ body {
     color: #888;
 }
 
-/* Main Content Styles */
 main {
     padding: 40px 0;
 }
@@ -103,62 +101,62 @@ blockquote {
     font-size: 1.2em;
     color: #555;
 }
-/* Stiluri pentru Butonul Acasă */
+
 .home-buttonaur {
     font-family: 'Noticia Text', serif;
     display: inline-block;
-    background-color: #ffcc00; /* O nuanță de roșu puternic */
-    color: #ffffff; /* Text alb */
+    background-color: #ffcc00; 
+    color: #ffffff; 
     padding: 12px 24px;
-    margin-bottom: 25px; /* Spațiu sub buton */
-    border-radius: 5px; /* Colțuri rotunjite */
+    margin-bottom: 25px; 
+    border-radius: 5px; 
     font-weight: bold;
-    text-decoration: none; /* Elimină sublinierea de la link */
-    text-transform: uppercase; /* Litere mari */
+    text-decoration: none; 
+    text-transform: uppercase; 
     letter-spacing: 1px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* Animație lină pentru toate proprietățile */
+    transition: all 0.3s ease;
 }
 
-/* Animație la hover (când mouse-ul este deasupra) */
+
 .home-buttonaur:hover {
     transform: scale(1.1);
-    background-color: #ff523e; /* Roșu mai deschis */
+    background-color: #ff523e; 
   box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.5);
 }
 .home-buttonaur:active {
     transform: scale(0.8);
-    background-color: #ff523e; /* Roșu mai deschis */
+    background-color: #ff523e; 
   box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
 }
 .home-button {
     font-family: 'Noticia Text', serif;
     display: inline-block;
-    background-color: #c0392b; /* O nuanță de roșu puternic */
-    color: #ffffff; /* Text alb */
+    background-color: #c0392b;
+    color: #ffffff; 
     padding: 12px 24px;
-    margin-bottom: 25px; /* Spațiu sub buton */
-    border-radius: 5px; /* Colțuri rotunjite */
+    margin-bottom: 25px; 
+    border-radius: 5px; 
     font-weight: bold;
-    text-decoration: none; /* Elimină sublinierea de la link */
-    text-transform: uppercase; /* Litere mari */
+    text-decoration: none; 
+    text-transform: uppercase;
     letter-spacing: 1px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* Animație lină pentru toate proprietățile */
+    transition: all 0.3s ease; 
 }
 
-/* Animație la hover (când mouse-ul este deasupra) */
+
 .home-button:hover {
     transform: scale(1.1);
-    background-color: #ff523e; /* Roșu mai deschis */
+    background-color: #ff523e; 
   box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.5);
 }
 .home-button:active {
     transform: scale(0.8);
-    background-color: #ff523e; /* Roșu mai deschis */
+    background-color: #ff523e; 
   box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
 }
-/* Animație la click (când butonul este apăsat) */
+
 blockquote cite {
     display: block;
     margin-top: 0.5em;
@@ -167,7 +165,6 @@ blockquote cite {
     color: #888;
 }
 
-/* Footer Styles */
 .article-footer {
     padding: 20px 0;
     text-align: center;
