@@ -12122,8 +12122,8 @@ background-image: linear-gradient(to top, #fff 0%, rgba(0, 0, 255, 0.35) 99%, rg
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: -webkit-linear-gradient(bottom, #fff 0%, rgba(105, 90, 166, 0.35) 99%, rgba(105, 90, 166, 0.5) 100%);
-  background-image: linear-gradient(to top, #fff 0%, rgba(105, 90, 166, 0.35) 99%, rgba(105, 90, 166, 0.5) 100%);
+background-image: -webkit-linear-gradient(bottom, #fff 0%, rgba(0, 0, 255, 0.5) 99%, rgba(0, 0, 255, 0.5) 100%);
+background-image: linear-gradient(to top, #fff 0%, rgba(0, 0, 255, 0.5) 99%, rgba(0, 0, 255, 0.5) 100%);
 }
 
 .headerusr .header-content {
