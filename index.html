@@ -75,21 +75,56 @@
         .header .header-content .header-title .down {
             text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
         }
+
+    
+        .accessibility-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; 
+            background-color: #D19B2F; 
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            z-index: 1000;
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+
+        }
+
+        .accessibility-button:hover {
+            transform: scale(1.1) rotate(45deg);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+
+        .accessibility-button:active {
+            transform: scale(0.9) rotate(-45deg);
+            transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
     .accessibility-options {
         position: fixed;
         bottom: 80px;
         left: 20px;
+       
         background-color: rgba(255, 255, 255, 0.15); 
         border: 1px solid rgba(255, 255, 255, 0.2); 
-        border-radius: 12px; 
+        border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
         z-index: 999;
         display: none;
         flex-direction: column;
         padding: 10px;
-        -webkit-backdrop-filter: blur(55px); 
+        -webkit-backdrop-filter: blur(55px);
         backdrop-filter: blur(55px); 
-        transition: background-color 0.3s ease, border 0.3s ease;
+        transition: background-color 0.3s ease, border 0.3s ease; 
     }
 
     .accessibility-options button {
@@ -124,8 +159,6 @@
         color: #f0f0f0;
     }
 
-   
-
 
     body.dark-mode .accessibility-options {
         background-color: rgba(0, 0, 0, 0.15); 
@@ -134,7 +167,7 @@
     }
 
     body.dark-mode .accessibility-options button {
-        color: #f0f0f0; 
+        color: #f0f0f0;
     }
 
     body.dark-mode .accessibility-options button:hover {
@@ -142,7 +175,85 @@
     }
 
 
-</style>
+
+
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .custom-navbar {
+            background-color: rgba(50, 50, 50, 0.6) !important;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            color: #f0f0f0;
+        }
+        body.dark-mode .custom-navbar.affix {
+            background-color: rgba(50, 50, 50, 0.9) !important;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .custom-navbar .nav .link {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .custom-navbar .nav {
+            background: rgba(50, 50, 50, 0.9) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header .header-content .header-title .up,
+        body.dark-mode .header .header-content .header-title .up,
+        body.dark-mode .header .header-content .header-title .down { 
+            color: #f0f0f0; 
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        body.dark-mode .header .overlay {
+            background-color: rgba(0, 0, 0, 0.4) !important;
+        }
+
+
+        body.dark-mode .section-title,
+        body.dark-mode .section-subtitle,
+        body.dark-mode .footer p {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .portfolio-card .portfolio-card-overlay {
+            background-color: rgba(0, 0, 0, 0.25) !important; 
+        }
+
+        body.dark-mode .portfolio-card:hover .portfolio-card-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+        body.dark-mode .portfolio-card-caption h4,
+        body.dark-mode .portfolio-card-caption p {
+            color: #333 !important;
+        }
+        body.dark-mode .portfolio-card:hover .portfolio-card-caption h4,
+        body.dark-mode .portfolio-card:hover .portfolio-card-caption p {
+            color: #333 !important; 
+        }
+
+
+
+        body.dark-mode .accessibility-options button:hover {
+            background-color: rgba(209, 155, 47, 0.4);
+        }
+
+        body.no-animations * {
+            transition: none !important;
+            animation: none !important;
+        }
+        body.no-animations .accessibility-button {
+            transition: none !important;
+            transform: none !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+        }
+
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 <a href="#" class="up-button">
