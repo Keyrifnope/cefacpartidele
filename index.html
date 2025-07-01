@@ -10,6 +10,7 @@
 
   gtag('config', 'G-KNLFQ7820Y');
 </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Tinem la curent cetatenii intr-un mod simplu, usor de inteles, lucru care devine tot mai greu in lumea actuala, plina de clickbaituri si headlineuri senzationale!">
@@ -112,7 +113,8 @@
   <a href="#guvernare" class="btn btn-primary">Partide la guvernare</a>
 <a href="#opozitie" class="btn btn-primary">Partide in opozitie</a>
 <a href="about/index.html" class="btn btn-primary">Scopul proiectului</a>
-<a href="https://buymeacoffee.com/cefacpartidele" class="btn btn-primary">Lasa-mi o cafea &#9749;</a>
+<a href="https://buymeacoffee.com/cefacpartidele" class="btn btn-primary">Sustine cu o cafea &#9749;</a>
+
 </div>
         </div>              
     </header>
@@ -237,19 +239,16 @@
     <script>
         $(document).ready(function() {
             $('.portfolio-card').on('click', function(e) {
-                e.preventDefault(); // Oprește comportamentul implicit al link-ului
+                e.preventDefault(); 
 
                 var $card = $(this);
                 var targetUrl = $card.attr('href');
 
-                // Adaugă clasa pentru efectul vizual la click
-                // Această clasă activează transformările și umbra din CSS
                 $card.addClass('clicked-effect');
 
-                // Setăm un timer pentru a naviga după delay-ul de 0.5 secunde
                 setTimeout(function() {
                     window.location.href = targetUrl;
-                }, 500); // 500 milisecunde = 0.5 secunde
+                }, 500); 
             });
         });
     </script>
