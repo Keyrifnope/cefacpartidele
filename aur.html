@@ -20,6 +20,13 @@
     <link rel="stylesheet" href="assets/css/meyawo.css">
 
     <style>
+        .headeraur {
+        }
+        .headeraur .overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
         .btn-primary {
             background-color: rgba(209, 155, 47, 0.5); 
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -32,18 +39,21 @@
         }
 
         .portfolio-card .portfolio-card-overlay {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.15); 
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
         }
-
+        /* Textul pe carduri la hover (în modul Light) */
+        .portfolio-card:hover .portfolio-card-caption h4,
+        .portfolio-card:hover .portfolio-card-caption p {
+            color: #333 !important; 
+        }
 
         .custom-navbar.affix {
             background-color: rgba(255, 255, 255, 0.6) !important;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
-
 
         @media (max-width: 991.98px) {
             .custom-navbar .nav {
@@ -57,14 +67,177 @@
             }
         }
         
-
         .header .header-content .header-title .up,
         .header .header-content .header-title .down,
         .headeraur .header-content .header-title .down { 
             text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
         }
+
+        .accessibility-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; 
+            background-color: #D19B2F; 
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            z-index: 1000;
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+        }
+
+        .accessibility-button:hover {
+            transform: scale(1.1) rotate(45deg);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+
+        .accessibility-button:active {
+            transform: scale(0.9) rotate(-45deg);
+            transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .accessibility-options {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .accessibility-options button {
+            background-color: transparent;
+            border: none;
+            color: #333;
+            padding: 8px 12px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .accessibility-options button:hover {
+            background-color: rgba(209, 155, 47, 0.2);
+        }
+
+        .accessibility-options input[type="checkbox"] {
+            margin-left: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .custom-navbar {
+            background-color: rgba(50, 50, 50, 0.6) !important;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            color: #f0f0f0;
+        }
+        body.dark-mode .custom-navbar.affix {
+            background-color: rgba(50, 50, 50, 0.9) !important;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .custom-navbar .nav .link {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .custom-navbar .nav {
+            background: rgba(50, 50, 50, 0.9) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header .header-content .header-title .up,
+        body.dark-mode .header .header-content .header-title .up,
+        body.dark-mode .header .header-content .header-title .down,
+        body.dark-mode .headeraur .header-content .header-title .down { 
+            color: #f0f0f0; 
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+    
+        body.dark-mode .headeraur {
+        }
+        body.dark-mode .headeraur .overlay {
+            background-color: rgba(0, 0, 0, 0.4) !important;
+        }
+
+
+        body.dark-mode .section-title,
+        body.dark-mode .section-subtitle,
+        body.dark-mode .footer p {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .portfolio-card .portfolio-card-overlay {
+            background-color: rgba(0, 0, 0, 0.25) !important; 
+        }
+
+        body.dark-mode .portfolio-card:hover .portfolio-card-overlay {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        body.dark-mode .portfolio-card-caption h4,
+        body.dark-mode .portfolio-card-caption p {
+            color: #333 !important;
+        }
+
+        body.dark-mode .portfolio-card:hover .portfolio-card-caption h4,
+        body.dark-mode .portfolio-card:hover .portfolio-card-caption p {
+            color: #333 !important;
+        }rgb(0, 0, 0)
+
+
+        body.dark-mode .accessibility-options {
+            background-color: rgba(50, 50, 50, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode .accessibility-options button {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .accessibility-options button:hover {
+            background-color: rgba(209, 155, 47, 0.4);
+        }
+
+        body.no-animations * {
+            transition: none !important;
+            animation: none !important;
+        }
+        body.no-animations .accessibility-button {
+            transition: none !important;
+            transform: none !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+        }
+
     </style>
-    </head>
+</head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 <a href="#" class="up-button">
     <span>⇧</span>
@@ -154,11 +327,84 @@
         </footer>
     </div> 
     
+    <button class="accessibility-button" id="accessibilityToggle">&#9881;</button>
+    <div class="accessibility-options" id="accessibilityOptions">
+        <button id="darkModeToggle">
+            Dark Mode [BETA]
+            <input type="checkbox" id="darkModeCheckbox">
+        </button>
+        <button id="disableAnimationsToggle">
+            Oprește Animațiile 
+            <input type="checkbox" id="animationsCheckbox">
+        </button>
+    </div>
 
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
     <script src="assets/js/meyawo.js"></script>
+    <script>
+        $(document).ready(function() {
+          
+            $('.portfolio-card').on('click', function(e) {
+                e.preventDefault(); 
 
+                var $card = $(this);
+                var targetUrl = $card.attr('href');
+
+                $card.addClass('clicked-effect');
+
+                setTimeout(function() {
+                    window.location.href = targetUrl;
+                }, 500); 
+            });
+
+           
+            const accessibilityToggle = document.getElementById('accessibilityToggle');
+            const accessibilityOptions = document.getElementById('accessibilityOptions');
+            const darkModeButton = document.getElementById('darkModeToggle');
+            const darkModeCheckbox = document.getElementById('darkModeCheckbox');
+            const disableAnimationsButton = document.getElementById('disableAnimationsToggle');
+            const animationsCheckbox = document.getElementById('animationsCheckbox');
+            const body = document.body;
+
+            accessibilityToggle.addEventListener('click', () => {
+                accessibilityOptions.style.display = accessibilityOptions.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            function updateCheckboxes() {
+                darkModeCheckbox.checked = body.classList.contains('dark-mode');
+                animationsCheckbox.checked = body.classList.contains('no-animations');
+            }
+
+            darkModeButton.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+                updateCheckboxes();
+            });
+
+            disableAnimationsButton.addEventListener('click', () => {
+                body.classList.toggle('no-animations');
+                if (body.classList.contains('no-animations')) {
+                    localStorage.setItem('animations', 'disabled');
+                } else {
+                    localStorage.setItem('animations', 'enabled');
+                }
+                updateCheckboxes();
+            });
+
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                body.classList.add('dark-mode');
+            }
+            if (localStorage.getItem('animations') === 'disabled') {
+                body.classList.add('no-animations');
+            }
+            updateCheckboxes();
+        });
+    </script>
 </body>
 </html>
