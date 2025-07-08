@@ -1,3 +1,6 @@
+[CLICK AICI PENTRU A ACCESA](https://keyrifnope.github.io/cefacpartidele/)
+
+
 Un website care arata activitatea partidelor din Romania. 
 
 **Care este scopul proiectului?**
